@@ -1392,6 +1392,8 @@ static inline long ksys_truncate(const char __user *pathname, loff_t length)
 	return do_sys_truncate(pathname, length);
 }
 
+asmlinkage long sys_hello(void);
+
 static inline unsigned int ksys_personality(unsigned int personality)
 {
 	unsigned int old = current->personality;
