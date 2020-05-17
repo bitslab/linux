@@ -1389,7 +1389,9 @@ static inline long ksys_truncate(const char __user *pathname, loff_t length)
 	return do_sys_truncate(pathname, length);
 }
 
-asmlinkage long sys_hello(void);
+asmlinkage long sys_hello_test(const struct pt_regs *pt);
+asmlinkage long sys_delegation_poll(const struct pt_regs *pt);
+asmlinkage long sys_delegation_send(const struct pt_regs *pt);
 
 static inline unsigned int ksys_personality(unsigned int personality)
 {
